@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lista de Compras</title>
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/botao.css">
+    <link rel="stylesheet" href="css/records.css">
+    <link rel="stylesheet" href="css/modal.css">
+    <link rel="stylesheet" href="css/listaCompras.css">
+    <script src="http://code.jquery.com/jquery-1.8.2.js"></script>
+    <script src="http://code.jquery.com/ui/1.9.0/jquery-ui.js"></script>
+    <script src="https://cdn.rawgit.com/plentz/jquery-maskmoney/master/dist/jquery.maskMoney.min.js"></script>
+    <script src="listaCompras.js" defer></script>
+</head>
+<body>
+    <header>
+        <h1 class="header-title">Lista de Compras</h1>
+    </header>
+    <main>
+        <div>
+        <button type="button" class="button darkgreen mobile" id="cadastrarProdutos">Cadastrar Produto</button>
+        <button type="button" class="button darkgreen mobile" onclick="location.href='categorias.html';">Categorias</button>
+        <button type="button" class="button darkgreen mobile" onclick="location.href='mercados.html';">Mercados</button>        
+        </div>
+        <div class="flex-container">
+            <div class="flex-item">
+                <table id="tabelaProdutos" class="records">
+                    <thead>
+                        <tr>
+                            <th>Comprado</th>
+                            <th>Descrição</th>
+                            <th>Categoria</th>                            
+                            <th>Mercado</th>
+                            <th>Valor</th>
+                            <th>Quantidade</th>
+                            <th>Subtotal</th>
+                            <th>Total</th>
+                            <th></th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                    </tbody>
+                </table>
+            </div>
+            <div class="modal" id="modal">
+                <div class="modal-content">
+                    <header class="modal-header">
+                        <h2>Novo Produto</h2>
+                        <span class="modal-close" id="modalClose">&#10006;</span>
+                    </header>
+                    <form id="form" class="modal-form">
+                        <input type="text" id="descricao" data-index="new" class="modal-field" placeholder="Descrição do Produto" required>
+                        <select id="categoria" class="modal-field" required></select>                        
+                        <select id="mercado" class="modal-field" required></select>
+                        <input type="number" min="0" value="" id="quantidade" class="modal-field" placeholder="Quantidade do Produto" required>
+                        <input type="text" value="" id="valor" class="modal-field" placeholder="Valor do Produto" required>
+                    </form>
+                    <footer class="modal-footer">
+                        <button id="salvar" class="button green">Salvar</button>
+                        <button id="cancelar" class="button red">Cancelar</button>
+                    </footer>
+                </div>
+            </div>
+        </main>
+    </body>
+    </html>    
