@@ -1,0 +1,13 @@
+.area-botao {
+    display: flex;
+}
+
+.label-checkbox {
+    align-self: center;
+    padding-left: 10px;
+}
+
+.div-checkbox {
+    display: flex;
+    padding-left: 10px;
+}
